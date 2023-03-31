@@ -14,20 +14,17 @@ function Teams() {
   // contato manhã
   const tm = `Bom dia ${solicitante}! Sou o Brian do Helpdesk.
 Contato Referente ao chamado: ${chamado}
-Podemos realizar atendimento agora?
-  `;
+Podemos realizar atendimento agora?`;
 
   // contato tarde
   const tt = `Boa tarde ${solicitante}! Sou o Brian do Helpdesk.
 Contato Referente ao chamado: ${chamado}
-Podemos realizar atendimento agora?
-  `;
+Podemos realizar atendimento agora?`;
 
   // contato noite
   const tn = `Boa noite ${solicitante}! Sou o Brian do Helpdesk.
 Contato Referente ao chamado: ${chamado}
-Podemos realizar atendimento agora?
-  `;
+Podemos realizar atendimento agora?`;
 
   return (
     <div className="container">

@@ -16,8 +16,7 @@ Não identificamos numero de telefone para contato.
   
 Favor retornar contato com Helpdesk assim que possivel.
   
-Atenciosamente, Helpdesk
-  `;
+Atenciosamente, Helpdesk`;
 
 //sem contato tarde
   const sct = `Boa tarde!
@@ -26,8 +25,7 @@ Não identificamos numero de telefone para contato.
   
 Favor retornar contato com Helpdesk assim que possivel.
   
-Atenciosamente, Helpdesk
-  `;
+Atenciosamente, Helpdesk`;
 
 //sem contato noite
   const scn = `Boa noite!
@@ -36,8 +34,7 @@ Não identificamos numero de telefone para contato.
   
 Favor retornar contato com Helpdesk assim que possivel.
   
-Atenciosamente, Helpdesk
-  `;
+Atenciosamente, Helpdesk`;
 
   return (
     <div className="container">
