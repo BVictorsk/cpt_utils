@@ -45,3 +45,11 @@ label {
     gap: 1rem;
     align-items: center;
 }
+
+#user-input,  #email-input{
+    color: #fff;
+    background-color: #000;
+    border-radius: .4rem;
+    text-align: start;
+    padding: 0 .5rem;
+}

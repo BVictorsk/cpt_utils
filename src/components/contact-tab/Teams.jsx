@@ -108,14 +108,26 @@ Podemos realizar atendimento agora?`;
               onChange={(event) => setSolicitante(event.target.value)}
               />
               </div>
+              <div className="input-group ">
+                <label htmlFor="chamado-input">Chamado:</label>
+                <input
+                type="text"
+                id="chamado-input"
+                className="input-chamado"
+                value={chamado}
+                onChange={(event) => setChamado(event.target.value)}
+                />
+              </div>
               <div className="input-group">
-              <label htmlFor="chamado-input">Chamado:</label>
-              <input
-              type="text"
-              id="chamado-input"
-              value={chamado}
-              onChange={(event) => setChamado(event.target.value)}
-              />
+                <label htmlFor="analista-select">Analista:</label>
+                  <select id="analista-select" value={analista} onChange={(event) => setAnalista(event.target.value)}>
+                    <option value="Brian">Brian</option>
+                    <option value="Jefferson">Jefferson</option>
+                    <option value="Lucas">Lucas</option>
+                    <option value="Luis">Luis</option>
+                    <option value="Paulo">Paulo</option>
+                    <option value="Renan">Renan</option>
+                  </select>
               </div>
               <div className="copy">
               <CopyButton text={tt} className='copy-btn' />
@@ -146,6 +158,17 @@ Podemos realizar atendimento agora?`;
           value={chamado}
           onChange={(event) => setChamado(event.target.value)}
         />
+      </div>
+      <div className="input-group">
+        <label htmlFor="analista-select">Analista:</label>
+          <select id="analista-select" value={analista} onChange={(event) => setAnalista(event.target.value)}>
+            <option value="Brian">Brian</option>
+            <option value="Jefferson">Jefferson</option>
+            <option value="Lucas">Lucas</option>
+            <option value="Luis">Luis</option>
+            <option value="Paulo">Paulo</option>
+            <option value="Renan">Renan</option>
+          </select>
       </div>
       <div className="copy">
         <CopyButton text={tn} className='copy-btn' />

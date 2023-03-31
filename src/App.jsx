@@ -30,6 +30,7 @@ function App() {
               } />
               <SubDrop label="log" content={
                 <div className="log-btn">
+                  <h1>Realizado contato via teams, aguardando resposta do solicitante</h1>
                   <CopyButton text='Realizado contato via teams, aguardando resposta do solicitante'  />
                 </div>
               }/>

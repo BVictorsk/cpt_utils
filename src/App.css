@@ -16,6 +16,8 @@ html {
     justify-content: center;
     margin: 1rem 0;
     height: 2rem;
+    gap: 1rem;
+    align-items: center;
 }
 
 body::-webkit-scrollbar {
