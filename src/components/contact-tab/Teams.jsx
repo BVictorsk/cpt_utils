@@ -6,23 +6,27 @@ function Teams() {
   const [toggleState, setToggleState] = useState(1);
   const [solicitante, setSolicitante] = useState("");
   const [chamado, setChamado] = useState("");
+  const [analista, setAnalista] = useState("");
+
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
+
   
   // contato manhã
-  const tm = `Bom dia ${solicitante}! Sou o Brian do Helpdesk.
+  const tm = `Bom dia ${solicitante}! Sou o ${analista} do Helpdesk.
 Contato Referente ao chamado: ${chamado}
 Podemos realizar atendimento agora?`;
 
   // contato tarde
-  const tt = `Boa tarde ${solicitante}! Sou o Brian do Helpdesk.
+  const tt = `Boa tarde ${solicitante}! Sou o ${analista} do Helpdesk.
 Contato Referente ao chamado: ${chamado}
 Podemos realizar atendimento agora?`;
 
   // contato noite
-  const tn = `Boa noite ${solicitante}! Sou o Brian do Helpdesk.
+  const tn = `Boa noite ${solicitante}! Sou o ${analista} do Helpdesk.
 Contato Referente ao chamado: ${chamado}
 Podemos realizar atendimento agora?`;
 
@@ -71,10 +75,21 @@ Podemos realizar atendimento agora?`;
               onChange={(event) => setChamado(event.target.value)}
             />
           </div>
+          <div className="input-group">
+          <label htmlFor="analista-select">Analista:</label>
+            <select id="analista-select" value={analista} onChange={(event) => setAnalista(event.target.value)}>
+              <option value="Brian">Brian</option>
+              <option value="Jefferson">Jefferson</option>
+              <option value="Lucas">Lucas</option>
+              <option value="Luis">Luis</option>
+              <option value="Paulo">Paulo</option>
+              <option value="Renan">Renan</option>
+            </select>
+          </div>
           <div className="copy">
             <CopyButton text={tm} className='copy-btn' />
           </div>
-          <p>Bom dia {solicitante}! Sou o Brian do Helpdesk</p>
+          <p>Bom dia {solicitante}! Sou o {analista} do Helpdesk</p>
           <br />
           <p>Contato referente ao chamado: {chamado}</p>
           <br />
@@ -105,7 +120,7 @@ Podemos realizar atendimento agora?`;
               <div className="copy">
               <CopyButton text={tt} className='copy-btn' />
               </div>
-              <p>Boa tarde {solicitante}! Sou o Brian do Helpdesk</p>
+              <p>Boa tarde {solicitante}! Sou o {analista} do Helpdesk</p>
               <br />
               <p>Contato referente ao chamado: {chamado}</p>
               <br />
@@ -135,7 +150,7 @@ Podemos realizar atendimento agora?`;
       <div className="copy">
         <CopyButton text={tn} className='copy-btn' />
       </div>
-      <p>Boa noite {solicitante}! Sou o Brian do Helpdesk</p>
+      <p>Boa noite {solicitante}! Sou o {analista} do Helpdesk</p>
       <br />
       <p>Contato referente ao chamado: {chamado}</p>
       <br />
