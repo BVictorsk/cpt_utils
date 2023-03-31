@@ -1,0 +1,24 @@
+.copy-button {
+    height: 2rem;
+    padding: 0 1rem;
+    font-size: .8rem;
+    font-weight: bold;
+    border-radius: .4rem;
+    background: #000;
+    transition: all .2s ease-in-out;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.copy-button:hover {
+    padding: 0 1.5rem;
+    font-size: .8rem;
+    font-weight: bold;
+    border-radius: 2px;
+    border-radius: .5rem;
+}
+
+.copied {
+    background-color: rgb(10, 201, 10);
+    color: #000;
+  }
+  

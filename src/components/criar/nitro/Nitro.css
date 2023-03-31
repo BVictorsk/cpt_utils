@@ -1,0 +1,47 @@
+.nitro-display, .nitro-office, .nitro-company, .nitro-script, .nitro-pasta {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nitro-display {
+    gap: 5rem;
+}
+
+.nitro-script{
+    gap: 8.8rem;
+}
+
+
+.nitro-pasta  {
+    gap: 9rem;
+}
+
+/* nitro-log */
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+label {
+    margin-right: .5rem;
+    margin-left: 1.5rem;
+}
+
+.nitro-log {
+    display: flex;
+    flex-direction: column;
+    margin: .7rem 1.5rem;
+}
+
+.margin {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
