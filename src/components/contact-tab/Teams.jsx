@@ -78,6 +78,7 @@ Podemos realizar atendimento agora?`;
           <div className="input-group">
           <label htmlFor="analista-select">Analista:</label>
             <select id="analista-select" value={analista} onChange={(event) => setAnalista(event.target.value)}>
+              <option value="">Selecione analista</option>
               <option value="Brian">Brian</option>
               <option value="Jefferson">Jefferson</option>
               <option value="Lucas">Lucas</option>

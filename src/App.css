@@ -2,6 +2,11 @@ html {
     background-color: #000;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+}
+  
+
 .App {
     display: flex;
     flex-direction: column;
