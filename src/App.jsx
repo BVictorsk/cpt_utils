@@ -16,15 +16,15 @@ function App() {
   return (
     <div className="App">
       <motion.div
-        whileInView={{ x: [-50, 0], opacity: [0, 1] }}
+        whileInView={{ x: [-40, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className="dropdown-center"
       >
         <Dropdown label="Contato" content={
           <div>
             <motion.div
-              whileInView={{ x: [-40, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              whileInView={{ x: [-30, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.7 }}
               className="dropdown-center"
             >     
               <SubDrop label="Tentativa de contato" content ={
@@ -32,8 +32,8 @@ function App() {
               }  />
             </motion.div> 
             <motion.div
-              whileInView={{ x: [-40, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              whileInView={{ x: [-30, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.7 }}
               className="dropdown-center"
             > 
               <SubDrop label="Sem Contato" content ={
@@ -41,21 +41,33 @@ function App() {
               }/>
             </motion.div>
             <motion.div
-              whileInView={{ x: [-40, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              whileInView={{ x: [-30, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.7 }}
               className="dropdown-center"
             > 
               <SubDrop label="Teams" content ={
                 <>
-                  <SubDrop label="Mensagem" content={
-                    <Teams />
-                  } />
-                  <SubDrop label="log" content={
-                    <div className="log-btn">
-                      <h1>Realizado contato via teams, aguardando resposta do solicitante</h1>
-                      <CopyButton text='Realizado contato via teams, aguardando resposta do solicitante'  />
-                    </div>
-                  }/>
+                  <motion.div
+                    whileInView={{ x: [-25, 0], opacity: [0, 1] }}
+                    transition={{ duration: 0.8 }}
+                    className="dropdown-center"
+                  > 
+                    <SubDrop label="Mensagem" content={
+                      <Teams />
+                    } />
+                  </motion.div>
+                  <motion.div
+                    whileInView={{ x: [-25, 0], opacity: [0, 1] }}
+                    transition={{ duration: 0.8 }}
+                    className="dropdown-center"
+                  > 
+                    <SubDrop label="log" content={
+                      <div className="log-btn">
+                        <h1>Realizado contato via teams, aguardando resposta do solicitante</h1>
+                        <CopyButton text='Realizado contato via teams, aguardando resposta do solicitante'  />
+                      </div>
+                    }/>
+                    </motion.div>
                 </>
 
                 } />
@@ -66,42 +78,66 @@ function App() {
       </motion.div>
 
       <motion.div
-        whileInView={{ x: [-50, 0], opacity: [0, 1] }}
+        whileInView={{ x: [-40, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className="dropdown-center"
       >
         <Dropdown label="Criação" content={
           <>
             <motion.div
-              whileInView={{ x: [-40, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              whileInView={{ x: [-30, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.7 }}
               className="dropdown-center"
             > 
               <SubDrop label="Nitro" content={
                 <>
-                <SubDrop label="Nitro Script" content={
-                  <NitroScript />
-                } />
-                <SubDrop label="Resolução" content={
-                  <NitroLog />
-                } />
+                  <motion.div
+                    whileInView={{ x: [-25, 0], opacity: [0, 1] }}
+                    transition={{ duration: 0.8 }}
+                    className="dropdown-center"
+                  > 
+                    <SubDrop label="Nitro Script" content={
+                      <NitroScript />
+                    } />
+                  </motion.div>
+                  <motion.div
+                    whileInView={{ x: [-25, 0], opacity: [0, 1] }}
+                    transition={{ duration: 0.8 }}
+                    className="dropdown-center"
+                  > 
+                    <SubDrop label="Resolução" content={
+                      <NitroLog />
+                    } />
+                  </motion.div>
                 </>
               }/>
             </motion.div>
 
             <motion.div
-              whileInView={{ x: [-40, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              whileInView={{ x: [-30, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.7 }}
               className="dropdown-center"
             > 
               <SubDrop label="Oji" content={
                 <>
-                <SubDrop label="Oji Script" content={
-                  <OjiScript />
-                } />
-                <SubDrop label="Resolução" content={
-                  <OjiLog />
-                } />
+                  <motion.div
+                    whileInView={{ x: [-25, 0], opacity: [0, 1] }}
+                    transition={{ duration: 0.8 }}
+                    className="dropdown-center"
+                  > 
+                    <SubDrop label="Oji Script" content={
+                      <OjiScript />
+                    } />
+                  </motion.div>
+                  <motion.div
+                    whileInView={{ x: [-25, 0], opacity: [0, 1] }}
+                    transition={{ duration: 0.8 }}
+                    className="dropdown-center"
+                  > 
+                    <SubDrop label="Resolução" content={
+                      <OjiLog />
+                    } />
+                  </motion.div>
                 </>
               }/>
             </motion.div>
