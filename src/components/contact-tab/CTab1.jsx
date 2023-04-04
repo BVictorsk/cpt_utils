@@ -6,6 +6,7 @@ function CTab1() {
   const [toggleState, setToggleState] = useState(1);
   const [solicitante, setSolicitante] = useState("");
   const [numero, setNumero] = useState("");
+  const [contato, setContato] = useState("");
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -16,7 +17,7 @@ function CTab1() {
   
 Realizada tentativa de contato no numero ${numero}
   
-Favor retornar contato com Helpdesk assim que possivel.
+Favor retornar contato com Helpdesk assim que possivel: ${contato}.
   
 Atenciosamente, Helpdesk`;
 
@@ -25,7 +26,7 @@ Atenciosamente, Helpdesk`;
   
 Realizada tentativa de contato no numero ${numero}
     
-Favor retornar contato com Helpdesk assim que possivel.
+Favor retornar contato com Helpdesk assim que possivel: ${contato}.
     
 Atenciosamente, Helpdesk`;
 
@@ -34,7 +35,7 @@ Atenciosamente, Helpdesk`;
   
 Realizada tentativa de contato no numero ${numero}
     
-Favor retornar contato com Helpdesk assim que possivel.
+Favor retornar contato com Helpdesk assim que possivel: ${contato}.
     
 Atenciosamente, Helpdesk`
 
@@ -83,6 +84,14 @@ Atenciosamente, Helpdesk`
               onChange={(event) => setNumero(event.target.value)}
             />
           </div>
+          <div className="input-group">
+            <label htmlFor="contato-select">Contato:</label>
+              <select id="contato-select" value={contato} onChange={(event) => setContato(event.target.value)}>
+                <option value="">Selecione Contato do Helpdesk</option>
+                <option value="(11) 2134-9011 /(11) 2147-6459">Nitro</option>
+                <option value="(11) 2134-9024 / (11) 2147-6462">Oji</option>
+              </select>
+          </div>
           <div className="copy">
             <CopyButton text={tm} className='copy-btn' />
           </div>
@@ -90,7 +99,7 @@ Atenciosamente, Helpdesk`
           <br />
           <p>Realizada tentativa de contato no numero {numero}</p>
           <br />
-          <p>Favor retornar contato com Helpdesk assim que possivel.</p>
+          <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
           <br />
           <p>Atenciosamente, Helpdesk.</p>
         </div>
@@ -105,62 +114,78 @@ Atenciosamente, Helpdesk`
               id="solicitante-input"
               value={solicitante}
               onChange={(event) => setSolicitante(event.target.value)}
-              />
-              </div>
-              <div className="input-group">
-              <label htmlFor="numero-input">Numero:</label>
-              <input
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="numero-input">Numero:</label>
+            <input
               type="text"
               id="numero-input"
               value={numero}
               onChange={(event) => setNumero(event.target.value)}
-              />
-              </div>
-              <div className="copy">
-              <CopyButton text={tt} className='copy-btn' />
-              </div>
-              <p>Boa tarde {solicitante}!</p>
-              <br />
-              <p>Realizada tentativa de contato no numero {numero}</p>
-              <br />
-              <p>Favor retornar contato com Helpdesk assim que possivel.</p>
-              <br />
-              <p>Atenciosamente, Helpdesk.</p>
-              </div>
-              <div
-      className={toggleState === 3 ? "content  active-content" : "content"}
-    >
-      <div className="input-group">
-        <label htmlFor="solicitante-input">Solicitante:</label>
-        <input
-          type="text"
-          id="solicitante-input"
-          value={solicitante}
-          onChange={(event) => setSolicitante(event.target.value)}
-        />
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="contato-select">Contato:</label>
+              <select id="contato-select" value={contato} onChange={(event) => setContato(event.target.value)}>
+                <option value="">Selecione Contato do Helpdesk</option>
+                <option value="(11) 2134-9011 /(11) 2147-6459">Nitro</option>
+                <option value="(11) 2134-9024 / (11) 2147-6462">Oji</option>
+              </select>
+          </div>
+          <div className="copy">
+            <CopyButton text={tt} className='copy-btn' />
+          </div>
+          <p>Boa tarde {solicitante}!</p>
+          <br />
+          <p>Realizada tentativa de contato no numero {numero}</p>
+          <br />
+          <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
+          <br />
+          <p>Atenciosamente, Helpdesk.</p>
+        </div>
+        <div
+          className={toggleState === 3 ? "content  active-content" : "content"}
+        >
+          <div className="input-group">
+            <label htmlFor="solicitante-input">Solicitante:</label>
+            <input
+              type="text"
+              id="solicitante-input"
+              value={solicitante}
+              onChange={(event) => setSolicitante(event.target.value)}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="numero-input">Numero:</label>
+            <input
+              type="text"
+              id="numero-input"
+              value={numero}
+              onChange={(event) => setNumero(event.target.value)}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="contato-select">Contato:</label>
+              <select id="contato-select" value={contato} onChange={(event) => setContato(event.target.value)}>
+                <option value="">Selecione Contato do Helpdesk</option>
+                <option value="(11) 2134-9011 /(11) 2147-6459">Nitro</option>
+                <option value="(11) 2134-9024 / (11) 2147-6462">Oji</option>
+              </select>
+          </div>  
+          <div className="copy">
+            <CopyButton text={tn} className='copy-btn' />
+          </div>
+          <p>Boa noite {solicitante}!</p>
+          <br />
+          <p>Realizada tentativa de contato no numero {numero}</p>
+          <br />
+          <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
+          <br />
+          <p>Atenciosamente, Helpdesk.</p>
+        </div>
       </div>
-      <div className="input-group">
-        <label htmlFor="numero-input">Numero:</label>
-        <input
-          type="text"
-          id="numero-input"
-          value={numero}
-          onChange={(event) => setNumero(event.target.value)}
-        />
-      </div>
-      <div className="copy">
-        <CopyButton text={tn} className='copy-btn' />
-      </div>
-      <p>Boa noite {solicitante}!</p>
-      <br />
-      <p>Realizada tentativa de contato no numero {numero}</p>
-      <br />
-      <p>Favor retornar contato com Helpdesk assim que possivel.</p>
-      <br />
-      <p>Atenciosamente, Helpdesk.</p>
     </div>
-  </div>
-</div>
 );
 }
 

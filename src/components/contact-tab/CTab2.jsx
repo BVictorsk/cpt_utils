@@ -4,6 +4,7 @@ import "./CTab.css";
 
 function CTab2() {
   const [toggleState, setToggleState] = useState(1);
+  const [contato, setContato] = useState("");
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -14,7 +15,7 @@ function CTab2() {
   
 Não identificamos numero de telefone para contato.
   
-Favor retornar contato com Helpdesk assim que possivel.
+Favor retornar contato com Helpdesk assim que possivel: ${contato}.
   
 Atenciosamente, Helpdesk`;
 
@@ -23,7 +24,7 @@ Atenciosamente, Helpdesk`;
   
 Não identificamos numero de telefone para contato.
   
-Favor retornar contato com Helpdesk assim que possivel.
+Favor retornar contato com Helpdesk assim que possivel: ${contato}.
   
 Atenciosamente, Helpdesk`;
 
@@ -32,7 +33,7 @@ Atenciosamente, Helpdesk`;
   
 Não identificamos numero de telefone para contato.
   
-Favor retornar contato com Helpdesk assim que possivel.
+Favor retornar contato com Helpdesk assim que possivel: ${contato}.
   
 Atenciosamente, Helpdesk`;
 
@@ -63,6 +64,14 @@ Atenciosamente, Helpdesk`;
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
+          <div className="input-group">
+            <label htmlFor="contato-select">Contato:</label>
+              <select id="contato-select" value={contato} onChange={(event) => setContato(event.target.value)}>
+                <option value="">Selecione Contato do Helpdesk</option>
+                <option value="(11) 2134-9011 /(11) 2147-6459">Nitro</option>
+                <option value="(11) 2134-9024 / (11) 2147-6462">Oji</option>
+              </select>
+          </div>  
           <div className="copy">
             <CopyButton text={scm} className='copy-btn' />
           </div>
@@ -70,7 +79,7 @@ Atenciosamente, Helpdesk`;
           <br />
           <p>Não identificamos numero de telefone para contato.</p>
           <br />
-          <p>Favor retornar contato com Helpdesk assim que possivel.</p>
+          <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
           <br />
           <p>Atenciosamente, Helpdesk</p>
         </div>
@@ -78,6 +87,14 @@ Atenciosamente, Helpdesk`;
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
+          <div className="input-group">
+            <label htmlFor="contato-select">Contato:</label>
+              <select id="contato-select" value={contato} onChange={(event) => setContato(event.target.value)}>
+                <option value="">Selecione Contato do Helpdesk</option>
+                <option value="(11) 2134-9011 /(11) 2147-6459">Nitro</option>
+                <option value="(11) 2134-9024 / (11) 2147-6462">Oji</option>
+              </select>
+          </div>  
           <div className="copy">
             <CopyButton text={sct} className='copy-btn' />
           </div>  
@@ -85,7 +102,7 @@ Atenciosamente, Helpdesk`;
           <br />
           <p>Não identificamos numero de telefone para contato.</p>
           <br />
-          <p>Favor retornar contato com Helpdesk assim que possivel.</p>
+          <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
           <br />
           <p>Atenciosamente, Helpdesk</p>
         </div>
@@ -93,6 +110,14 @@ Atenciosamente, Helpdesk`;
         <div
           className={toggleState === 3 ? "content  active-content" : "content"}
         >
+          <div className="input-group">
+            <label htmlFor="contato-select">Contato:</label>
+              <select id="contato-select" value={contato} onChange={(event) => setContato(event.target.value)}>
+                <option value="">Selecione Contato do Helpdesk</option>
+                <option value="(11) 2134-9011 /(11) 2147-6459">Nitro</option>
+                <option value="(11) 2134-9024 / (11) 2147-6462">Oji</option>
+              </select>
+          </div>  
           <div className="copy">
             <CopyButton text={scn} className='copy-btn' />
           </div>  
@@ -100,7 +125,7 @@ Atenciosamente, Helpdesk`;
           <br />
           <p>Não identificamos numero de telefone para contato.</p>
           <br />
-          <p>Favor retornar contato com Helpdesk assim que possivel.</p>
+          <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
           <br />
           <p>Atenciosamente, Helpdesk</p>
         </div>

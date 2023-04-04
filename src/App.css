@@ -25,6 +25,17 @@ body {
     align-items: center;
 }
 
+.log-btn-folder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 0;
+    height: 2rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+
 body::-webkit-scrollbar {
     width: 0;              /* width of the entire scrollbar */
 }

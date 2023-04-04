@@ -111,7 +111,7 @@ button {
   background-color: #000;
 }
 
-#analista-select {
+#analista-select, #contato-select {
   padding: .2rem .4rem;
   margin: .7rem 0;
   margin-left: 2.5rem;
