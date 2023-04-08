@@ -3,12 +3,12 @@ import DropDownTab from './tab/DropDownTab';
 import styled from '@emotion/styled';
 
 const DropdownContainer  = styled.div`
-  border-bottom: 1px solid ${props => props.theme.palette.red.main};
-  padding: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #fff;
 
   ul {
+    margin-top: .5rem;
+    margin-left: 1rem;
     text-decoration: none;
     list-style-type: none;
   }

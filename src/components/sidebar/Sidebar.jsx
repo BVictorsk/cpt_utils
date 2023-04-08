@@ -7,19 +7,30 @@ const SidebarContainer  = styled.div`
   flex: 1;
   background-color: ${props => props.theme.palette.sidebar.main};
   border-right: .1rem solid #fa0f26;
-  text-decoration: none;
-  list-style-type: none;
+  display: flex;
+  
+  ul {
+    text-decoration: none;
+    list-style-type: none;
+
+    flex:1;
+  }
+  
+`;
+
+const StyledLi = styled.li`
+  border-bottom: 1px solid ${props => props.theme.palette.red.main};
+  padding: 1.3rem;
 `;
 
 const StyledNavLink = styled(NavLink)`
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #fff;
 
   text-decoration: none;
   list-style-type: none;
 
   &.active {
-    /* styles for the active link */
     font-weight: bold;
     color: ${props => props.theme.palette.red.main}
   }
@@ -29,32 +40,32 @@ const Sidebar = () => {
   return (
     <SidebarContainer >
       <ul>
-        <li>
+        <StyledLi>
           <StyledNavLink to='/'>
-            <Dropdown label="Contato" />
+            Contato
           </StyledNavLink>
-        </li>
-        <li>
+        </StyledLi>
+        <StyledLi>
           <Dropdown label="Criação" content={
             <ul>
               <li>
                 <StyledNavLink to='/newUser/Nitro'>
-                  <p>Nitro</p>
+                  Nitro
                 </StyledNavLink>
               </li>
               <li>
                 <StyledNavLink to='/newUser/Oji'>
-                  <p>Oji</p>
+                  Oji
                 </StyledNavLink>
               </li>
             </ul>
           } />
-        </li>
-        <li>
-          <StyledNavLink >
-            <Dropdown label="Acessos" />
+        </StyledLi>
+        <StyledLi>
+          <StyledNavLink to='/gruposDeAcesso'>
+            Acessos
           </StyledNavLink>
-        </li>
+        </StyledLi>
       </ul>
       
     </SidebarContainer >
