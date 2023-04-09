@@ -11,6 +11,7 @@ const ContactContainer = styled.div`
   margin-top: 2rem;
   width: 90%;
   background-color: ${props => props.theme.palette.sidebar.main};
+  
 }`;
 
 const TabContainer = styled.div`

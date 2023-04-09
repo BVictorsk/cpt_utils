@@ -12,6 +12,7 @@ const NavbarContainer = styled.div`
   overflow: hidden;
   border-bottom: .3rem solid #fa0f26;
   background-color: ${props => props.theme.palette.navbar.main};
+  transition: all 0.2s ease-in-out;
 `;
 
 const LogoContainer = styled.div`
@@ -34,7 +35,14 @@ const ThemeSwitcher = styled.button`
 
   border-radius: 1rem;
 
-  color: ${props => props.theme.palette.textBtn.main}
+  color: ${props => props.theme.palette.textBtn.main};
+
+  background-color: ${props => props.theme.palette.themeSwitcher.main};
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: ${props => props.theme.palette.themeSwitcher.dark};
+  }
 `;
 
 

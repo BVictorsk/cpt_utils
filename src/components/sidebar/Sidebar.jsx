@@ -8,6 +8,7 @@ const SidebarContainer  = styled.div`
   background-color: ${props => props.theme.palette.sidebar.main};
   border-right: .1rem solid #fa0f26;
   display: flex;
+  transition: all 0.4s ease-in-out;
   
   ul {
     text-decoration: none;
@@ -30,9 +31,12 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   list-style-type: none;
 
+  transition: all 0.3s ease-in-out;
+
   &.active {
     font-weight: bold;
     color: ${props => props.theme.palette.red.main}
+    
   }
 `;
 

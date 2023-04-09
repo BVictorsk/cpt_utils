@@ -28,12 +28,13 @@
   }
   
   .App-light {
-    background-color: #303030;
-    
+    background-color: #cfcfcf;
+    transition: all 0.2s ease-in-out;
   }
   
   .App-dark {
     background-color: #000;
+    transition: all 0.2s ease-in-out;
   }
   
   li {
