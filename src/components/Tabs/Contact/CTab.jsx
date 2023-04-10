@@ -242,6 +242,9 @@ Possui disponibilidade para realizar atendimento do chamado agora?`
         <p>Motivo do contato referente ao chamado: {chamado}.</p>
         <p>Possui disponibilidade para realizar atendimento do chamado agora?</p>
         <CopyButton text={ct}/>
+        <br />
+        <p>Log: Realizado contato via teams, aguardando resposta do solicitante</p>
+        <CopyButton text='Realizado contato via teams, aguardando resposta do solicitante'/>
       </ContentContact>
    },
    
