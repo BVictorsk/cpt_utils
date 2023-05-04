@@ -46,6 +46,10 @@ const TabContent = styled.div`
 
   select {
     margin-top: -1rem;
+    background-color: ${props => props.theme.palette.navbar.main};
+    color: ${props => props.theme.palette.txt.main};
+    height: 2.5rem;
+    width: 22rem
   }
 `;
 
@@ -171,7 +175,7 @@ Em caso de erro ou duvida, favor entrar em contato com Helpdesk: ${contato}`;
         <AccessContent>
             <h3>Liberação de acesso a pasta de rede</h3>
             <p>{greetings}!</p>
-            <p>Foi realizada alteração de acesso a pasta de rede.Acesso a pasta foi liberado.</p>
+            <p>Foi realizada alteração de acesso a pasta de rede. Acesso a pasta foi liberado.</p>
             <p>Favor reiniciar maquina para aplicar alteração na conta</p>
             <p>Em caso de erro ou duvida, favor entrar em contato com Helpdesk: {contato}</p>
             <CopyButton text={pastaL}/>
@@ -179,7 +183,7 @@ Em caso de erro ou duvida, favor entrar em contato com Helpdesk: ${contato}`;
         <AccessContent>
             <h3>Revogar acesso a pasta de rede</h3>
             <p>{greetings}!</p>
-            <p>Foi realizada alteração de acesso a pasta de rede.Acesso a pasta foi revogado.</p>
+            <p>Foi realizada alteração de acesso a pasta de rede. Acesso a pasta foi revogado.</p>
             <p>Em caso de erro ou duvida, favor entrar em contato com Helpdesk: {contato}</p>
             <CopyButton text={pastaR}/>
         </AccessContent>

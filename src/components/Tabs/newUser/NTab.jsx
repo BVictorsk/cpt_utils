@@ -79,7 +79,7 @@ const NitroFormContainer = styled.form`
 
   input {
     background-color: ${props => props.theme.palette.navbar.main};
-    color: ${props => props.theme.palette.txtInput.main};
+    color: ${props => props.theme.palette.txt.main};
     height: 2.2rem;
     padding: 1rem;
   }
@@ -122,7 +122,7 @@ const Nitro = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
-  const nitroLog = `Realizada criação de usuário com sucesso.Segue abaixo credenciais de acesso.
+  const nitroLog = `Realizada criação de usuário com sucesso. Segue abaixo credenciais de acesso.
     
 Usuário: ${user}
 E-mail: ${email}

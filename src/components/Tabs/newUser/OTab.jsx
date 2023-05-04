@@ -155,7 +155,7 @@ const Oji = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
-  const ojiLog = `Realizada criação de usuário com sucesso.Segue abaixo credenciais de acesso.
+  const ojiLog = `Realizada criação de usuário com sucesso. Segue abaixo credenciais de acesso.
     
 Usuário: ${user}
 E-mail: ${email}

@@ -21,9 +21,6 @@ export const theme = createTheme({
     txtLabel: {
       main: '#fff',
     },
-    txtInput: {
-      main: '#000',
-    },
     txt: {
       main: '#000',
     },
@@ -51,9 +48,6 @@ export const darkTheme = createTheme({
     txtLabel: {
       main: '#fa0f26',
     },
-    txtInput: {
-      main: '#000',
-    },
     txt: {
       main: '#fff',
     },
@@ -61,4 +55,3 @@ export const darkTheme = createTheme({
 });
 
 export { ThemeProvider };
-// 0c5993
