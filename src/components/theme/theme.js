@@ -13,10 +13,10 @@ export const theme = createTheme({
       main: '#fff',
     },
     sidebar: {
-      main: '#0c5993',
+      main: '#04548c',
     },
     red: {
-      main: '#ad0a1a',
+      main: '#fb1424',
     },
     txtLabel: {
       main: '#fff',
@@ -31,7 +31,7 @@ export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     navbar: {
-      main: '#303030',
+      main: '#000',
     },
     themeSwitcher: {
       main: '#fff',
@@ -40,10 +40,10 @@ export const darkTheme = createTheme({
       main: '#000',
     },
     sidebar: {
-      main: '#052a46',
+      main: '#04548c',
     },
     red: {
-      main: '#fa0f26',
+      main: '#fb1424',
     },
     txtLabel: {
       main: '#fa0f26',

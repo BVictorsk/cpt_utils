@@ -11,8 +11,8 @@ const NavbarContainer = styled.div`
   height: 7rem;
   overflow: hidden;
   border-bottom: .3rem solid #fa0f26;
-  background-color: ${props => props.theme.palette.navbar.main};
   transition: all 0.2s ease-in-out;
+  background-color: ${props => props.theme.palette.navbar.main};
 `;
 
 const LogoContainer = styled.div`

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 const SidebarContainer  = styled.div`
   flex: 1;
   background-color: ${props => props.theme.palette.sidebar.main};
-  border-right: .1rem solid #fa0f26;
+  border-right: .1rem solid ${props => props.theme.palette.red.main};;
   display: flex;
   transition: all 0.4s ease-in-out;
   
