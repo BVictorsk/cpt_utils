@@ -6,23 +6,27 @@ export const theme = createTheme({
     navbar: {
       main: '#fff'
     },
+    tab: {
+      strong: '#04548c',
+      light: '#023559',
+    },
     themeSwitcher: {
-      main: '#000',
-    },
-    textBtn: {
-      main: '#fff',
-    },
-    sidebar: {
       main: '#04548c',
     },
-    red: {
-      main: '#fb1424',
-    },
-    txtLabel: {
+    sidebar: {
       main: '#fff',
+    },
+    border: {
+      main: '#04548c',
     },
     txt: {
       main: '#000',
+      white: "#f2f2f2",
+      label: '#E2E2E2AB',
+      textBtn: '#fff',
+    },
+    copyButton: {
+      main: '#04548c',
     },
   },
 });
@@ -33,23 +37,27 @@ export const darkTheme = createTheme({
     navbar: {
       main: '#000',
     },
-    themeSwitcher: {
-      main: '#fff',
+    tab: {
+      strong: '#f90e25',
+      light: '#ad0a1a',
     },
-    textBtn: {
-      main: '#000',
+    themeSwitcher: {
+      main: '#f90e25',
     },
     sidebar: {
-      main: '#04548c',
+      main: '#000',
     },
-    red: {
+    border: {
       main: '#fb1424',
-    },
-    txtLabel: {
-      main: '#fa0f26',
     },
     txt: {
       main: '#fff',
+      white: "#f2f2f2",
+      label: '#E2E2E2AB',
+      textBtn: '#000',
+    },
+    copyButton: {
+      main: '#fb1424',
     },
   },
 });

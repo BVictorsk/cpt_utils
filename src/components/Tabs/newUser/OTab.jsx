@@ -10,6 +10,8 @@ const OjiContainer = styled.div`
   margin-top: 2rem;
   width: 90%;
   background-color: ${props => props.theme.palette.sidebar.main};
+  padding-bottom: 10rem;
+  }
 }`;
 
 const TabContainer = styled.div`
@@ -20,7 +22,7 @@ const TabContainer = styled.div`
 
 const TabButton = styled.button`
   padding: 10px;
-  background-color: ${({ selected }) => selected ? '#fa0f26' : '#ad0a1a'};
+  background-color: ${({ selected, theme }) => selected ? theme.palette.tab.strong : theme.palette.tab.light};
   color: white;
   border: none;
   cursor: pointer;
@@ -49,6 +51,7 @@ const ContentOjiContainer = styled.div`
     color: white;
     font-size: 1.5rem;
     margin-bottom: .5rem;
+    color: ${props => props.theme.palette.txt.main};
   }
 `;
 
@@ -61,7 +64,7 @@ const Desc = styled.div`
   padding: .4rem;
 
   p {
-    color: white;
+    color: ${props => props.theme.palette.txt.main};
     font-size: 1.5rem;
   }
 `;
@@ -73,11 +76,11 @@ const DescOffice = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: .5rem;
-  border-top: 1px solid ${props => props.theme.palette.red.main};
-  border-bottom: 1px solid ${props => props.theme.palette.red.main};
+  border-top: 1px solid ${props => props.theme.palette.border.main};
+  border-bottom: 1px solid ${props => props.theme.palette.border.main};
 
   p {
-    color: white;
+    color: ${props => props.theme.palette.txt.main};
     font-size: 1.5rem;
   }
 `;
@@ -89,10 +92,10 @@ const DescCompany = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: .5rem;
-  border-bottom: 1px solid ${props => props.theme.palette.red.main};
+  border-bottom: 1px solid ${props => props.theme.palette.border.main};
 
   p {
-    color: white;
+    color: ${props => props.theme.palette.txt.main};
     font-size: 1.5rem;
   }
 `;
@@ -106,7 +109,7 @@ const OjiFormContainer = styled.form`
   label {
     margin-top: 1rem;
     margin-bottom: .3rem;
-    color: ${props => props.theme.palette.txtLabel.main};
+    color: ${props => props.theme.palette.txt.main};
     font-size: 1.4rem;
   }
 
@@ -125,7 +128,7 @@ const OjiLog = styled.div `
   margin-bottom: 2rem;
 
   p {
-    color: white;
+    color: ${props => props.theme.palette.txt.main};
     font-size: 1.5rem
   }
 
@@ -139,7 +142,7 @@ const OjiLog = styled.div `
 const OjiNotificar = styled.div `
 
   p {
-    color: white;
+    color: ${props => props.theme.palette.txt.main};
     font-size: 1.5rem;
     margin-left: 1rem;
   }
@@ -169,49 +172,69 @@ Senha: Papeis@2023`;
         <h3>Description:</h3>
         <Desc>
           <p>Efetivos: Efetivo / DRT - Piracicaba</p>
+          <div className="btn-wrapper">          
           <CopyButton text='Efetivo / DRT - Piracicaba'  />
+          </div>
         </Desc>
         <Desc>
           <p>Estagiarios: Estagiário(a) / DRT - Piracicaba</p>
+          <div className="btn-wrapper">          
           <CopyButton text='Estagiário(a) / DRT - Piracicaba'  />
+          </div>
         </Desc>
         <Desc>
           <p>Menor aprendiz: Menor Aprendiz / Piracicaba</p>
+          <div className="btn-wrapper">          
           <CopyButton text='Menor Aprendiz / Piracicaba'  />
+          </div>
         </Desc>
         <Desc>
           <p>Terceiros: Terceiro / Nome da Empresa</p>
+          <div className="btn-wrapper">          
           <CopyButton text='Terceiro / Nome da Empresa'  />
+          </div>
         </Desc>
 
         <DescOffice>
           <p>Office: Piracicaba</p>
+          <div className="btn-wrapper">          
           <CopyButton text='Piracicaba'  />
+          </div>
         </DescOffice>
 
         <DescCompany>
           <p>Company: Oji Papéis Especiais. </p>
+          <div className="btn-wrapper">          
           <CopyButton text='Oji Papéis Especiais.'  />
+          </div>
         </DescCompany>
 
         <Desc>
           <p>Efetivos: PC - TODOS; FSSO_RESTRITO; PC - Efetivos;</p>
+          <div className="btn-wrapper">          
           <CopyButton text='PC - TODOS; FSSO_RESTRITO; PC - Efetivos;'  />
+          </div>
         </Desc>
 
         <Desc>
           <p>Estagiarios: PC - TODOS; FSSO_RESTRITO; PC - Estagiarios;</p>
+          <div className="btn-wrapper">          
           <CopyButton text='PC - TODOS; FSSO_RESTRITO; PC - Estagiarios;'  />
+          </div>
         </Desc>
 
         <Desc>
           <p>Menor Aprendiz: PC - TODOS; FSSO_RESTRITO; PC - Aprendiz;</p>
+          <div className="btn-wrapper">          
           <CopyButton text='PC - TODOS; FSSO_RESTRITO; PC - Aprendiz;'  />
+          </div>
         </Desc>
 
         <Desc>
           <p>Terceiros: PC - TODOS; FSSO_RESTRITO; PC - Terceiros;</p>
+          <div className="btn-wrapper">          
           <CopyButton text='PC - TODOS; FSSO_RESTRITO; PC - Terceiros;'  />
+          </div>
         </Desc>
 
       </ContentOjiContainer>
@@ -244,12 +267,16 @@ Senha: Papeis@2023`;
             <p>Email: {email}</p>
             <p>Senha: **********</p>
 
+            <div className="btn-wrapper">
             <CopyButton text={ojiLog} />
+            </div>
 
         </OjiLog>
         <OjiNotificar>
             <p>Log notificar Reponsaveis: Responsaveis notificados via email.</p>
+            <div className="btn-wrapper">
             <CopyButton text="Responsaveis notificados via email." className='copy-btn' />
+            </div>
         </OjiNotificar>
         
       </ContentOjiContainer>

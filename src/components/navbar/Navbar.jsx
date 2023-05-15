@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import logo from '../../assets/CptLogo.png';
-import './Navbar.scss'
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -10,14 +8,26 @@ const NavbarContainer = styled.div`
   width: 100%;
   height: 7rem;
   overflow: hidden;
-  border-bottom: .3rem solid #fa0f26;
+  border-bottom: .3rem solid ${props => props.theme.palette.border.main};
   transition: all 0.2s ease-in-out;
   background-color: ${props => props.theme.palette.navbar.main};
+
+  .logo {
+    margin-left: 3rem;
+
+    h1 {
+      color: ${props => props.theme.palette.themeSwitcher.main};
+
+      span {
+        color: ${props => props.theme.palette.txt.main};
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+  }
 `;
 
-const LogoContainer = styled.div`
-    margin-left: 3rem
-`;
 
 const ThemeSwitcherContainer = styled.div`
   margin-right: 2rem;
@@ -35,7 +45,7 @@ const ThemeSwitcher = styled.button`
 
   border-radius: 1rem;
 
-  color: ${props => props.theme.palette.textBtn.main};
+  color: ${props => props.theme.palette.txt.white};
 
   background-color: ${props => props.theme.palette.themeSwitcher.main};
   transition: background-color 0.3s ease-in-out;
@@ -50,9 +60,9 @@ const Navbar = ({ toggleDarkMode, theme}) => {
 
   return (
       <NavbarContainer >
-        <LogoContainer>
-          <img src={logo} alt="Logo" className="logo" />
-        </LogoContainer>
+        <div className="logo">
+          <h1>UTILS<span>cpt</span></h1>
+        </div>
         <ThemeSwitcherContainer>
           <ThemeSwitcher onClick={toggleDarkMode} style={{ backgroundColor: theme.palette.themeSwitcher.main }} >
             Mudar Tema

@@ -22,7 +22,7 @@ const TabContainer = styled.div`
 
 const TabButton = styled.button`
   padding: 10px;
-  background-color: ${({ selected }) => selected ? '#fa0f26' : '#ad0a1a'};
+  background-color: ${({ selected, theme }) => selected ? theme.palette.tab.strong : theme.palette.tab.light};
   color: white;
   border: none;
   cursor: pointer;
@@ -46,7 +46,7 @@ const TabContent = styled.div`
 
   select {
     margin-top: -1rem;
-    background-color: ${props => props.theme.palette.navbar.main};
+    background-color: ${props => props.theme.palette.txt.white};
     color: ${props => props.theme.palette.txt.main};
     height: 2.5rem;
     width: 22rem
@@ -61,11 +61,13 @@ const AccessContent = styled.div`
 
     h3 {
         font-size: 1.6rem;
+        color: ${props => props.theme.palette.txt.main};
     }
 
     p {
         margin: 1rem;
         font-size: 1.3rem;
+        color: ${props => props.theme.palette.txt.main};
     }
 
     button {

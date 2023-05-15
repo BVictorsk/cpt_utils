@@ -10,7 +10,7 @@ import Contact from './pages/contact/Contact';
 import Nitro from './pages/newUser/Nitro';
 import Oji from './pages/newUser/Oji';
 import AccessGroups from './pages/accessGroups/AccessGroups';
-import './App.scss'
+import './App.css'
 import SideBar from './components/sidebar/Sidebar';
 
 function App() {

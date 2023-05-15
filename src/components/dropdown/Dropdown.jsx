@@ -4,7 +4,8 @@ import styled from '@emotion/styled';
 
 const DropdownContainer  = styled.div`
   font-size: 1.6rem;
-  color: #fff;
+  color: ${props => props.theme.palette.txt.main};;
+  font-weight: bold;
 
   ul {
     margin-top: .5rem;

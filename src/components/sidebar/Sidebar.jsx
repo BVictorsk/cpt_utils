@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 const SidebarContainer  = styled.div`
   flex: 1;
   background-color: ${props => props.theme.palette.sidebar.main};
-  border-right: .1rem solid ${props => props.theme.palette.red.main};;
+  border-right: .1rem solid ${props => props.theme.palette.border.main};;
   display: flex;
   transition: all 0.4s ease-in-out;
   
@@ -20,22 +20,22 @@ const SidebarContainer  = styled.div`
 `;
 
 const StyledLi = styled.li`
-  border-bottom: 1px solid ${props => props.theme.palette.red.main};
+  border-bottom: 1px solid ${props => props.theme.palette.border.main};;
   padding: 1.3rem;
 `;
 
 const StyledNavLink = styled(NavLink)`
   font-size: 1.6rem;
-  color: #fff;
+  color: ${props => props.theme.palette.txt.main};;
 
   text-decoration: none;
   list-style-type: none;
 
   transition: all 0.3s ease-in-out;
-
+  font-weight: bold;
   &.active {
     font-weight: bold;
-    color: ${props => props.theme.palette.red.main}
+    color: ${props => props.theme.palette.border.main};
     
   }
 `;

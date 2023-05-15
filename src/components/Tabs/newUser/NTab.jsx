@@ -20,7 +20,7 @@ const TabContainer = styled.div`
 
 const TabButton = styled.button`
   padding: 10px;
-  background-color: ${({ selected }) => selected ? '#fa0f26' : '#ad0a1a'};
+  background-color: ${({ selected, theme }) => selected ? theme.palette.tab.strong : theme.palette.tab.light};
   color: white;
   border: none;
   cursor: pointer;
@@ -47,6 +47,7 @@ const ContentNitroContainer = styled.div`
     color: white;
     font-size: 1.5rem;
     margin-bottom: .5rem;
+    color: ${props => props.theme.palette.txt.main};
   }
 `;
 
@@ -61,6 +62,7 @@ const Desc = styled.div`
   p {
     color: white;
     font-size: 1.5rem;
+    color: ${props => props.theme.palette.txt.main};
   }
 `;
 
@@ -73,7 +75,7 @@ const NitroFormContainer = styled.form`
   label {
     margin-top: 1rem;
     margin-bottom: .3rem;
-    color: ${props => props.theme.palette.txtLabel.main};
+    color: ${props => props.theme.palette.txt.main};
     font-size: 1.4rem;
   }
 
@@ -90,10 +92,14 @@ const NitroLog = styled.div `
   flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  color: ${props => props.theme.palette.txt.main};
 
   p {
-    color: white;
-    font-size: 1.5rem
+    font-size: 1.6rem;
+    color: ${props => props.theme.palette.txt.main};
+  }
+  .mb {
+    margin-bottom: 1rem;
   }
 
   button {
@@ -109,6 +115,7 @@ const NitroNotificar = styled.div `
     color: white;
     font-size: 1.5rem;
     margin-left: 1rem;
+    color: ${props => props.theme.palette.txt.main};
   }
 
   button {
@@ -134,24 +141,34 @@ Senha: nitro@2023`;
       content: 
       <ContentNitroContainer>
         <Desc>
-          <p>Description: | Nitro</p>
-          <CopyButton text=' | Nitro'  />
+          <p>Display: | Nitro</p>
+          <div className="btn-wrapper">          
+            <CopyButton text=' | Nitro'  />
+          </div>
         </Desc>
         <Desc>
           <p>Office: Nitro Química SP</p>
-          <CopyButton text='Nitro Química SP'  />
+          <div className="btn-wrapper">          
+            <CopyButton text='Nitro Química SP'  />
+          </div>
         </Desc>
         <Desc>
           <p>Company: Nitro Química</p>
-          <CopyButton text='Nitro Química'  />
+          <div className="btn-wrapper">          
+            <CopyButton text='Nitro Química'  />
+          </div>
         </Desc>
         <Desc>
           <p>Script</p>
-          <CopyButton text='\\nitroquimica.local\sysvol\nitroquimica.local\scripts'  />
+          <div className="btn-wrapper">          
+            <CopyButton text='\\nitroquimica.local\sysvol\nitroquimica.local\scripts'  />
+          </div>
         </Desc>
         <Desc>
           <p>Pasta</p>
-          <CopyButton text='L:\Users'  />
+          <div className="btn-wrapper">          
+            <CopyButton text='L:\Users'  />
+          </div>
         </Desc>
       </ContentNitroContainer>
     },
@@ -181,13 +198,13 @@ Senha: nitro@2023`;
             </p>
             <p>Usuário: {user}</p>
             <p>Email: {email}</p>
-            <p>Senha: **********</p>
+            <p className='mb'>Senha: **********</p>
 
             <CopyButton text={nitroLog} />
 
         </NitroLog>
         <NitroNotificar>
-            <p>Log notificar Reponsaveis: Responsaveis notificados via email.</p>
+            <p className='mb'>Log notificar Reponsaveis: Responsaveis notificados via email.</p>
             <CopyButton text="Responsaveis notificados via email." className='copy-btn' />
         </NitroNotificar>
         

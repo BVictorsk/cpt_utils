@@ -8,8 +8,15 @@ const ContactContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  width: 90%;
+  width: 95%;
+  padding-bottom: 2rem;
   background-color: ${props => props.theme.palette.sidebar.main};
+
+  .btn-wrapper {
+    button {
+      width: 20rem;
+    }
+  }
 }`;
 
 const TabContainer = styled.div`
@@ -20,11 +27,12 @@ const TabContainer = styled.div`
 
 const TabButton = styled.button`
   padding: 10px;
-  background-color: ${({ selected }) => selected ? '#fa0f26' : '#ad0a1a'};
+  background-color: ${({ selected, theme }) => selected ? theme.palette.tab.strong : theme.palette.tab.light};
   color: white;
   border: none;
   cursor: pointer;
   flex: 1;
+
 `;
 
 const TabContent = styled.div`
@@ -44,7 +52,7 @@ const ContentContact = styled.div`
   background-color: ${props => props.theme.palette.sidebar.main};
 
   label {
-    color: ${props => props.theme.palette.txtLabel.main};
+    color: ${props => props.theme.palette.txt.main};
     margin-bottom: .5rem;
     font-size: 1.4rem;
     font-weight: bold;
@@ -68,7 +76,7 @@ const ContentContact = styled.div`
   }
 
   p {
-    color: white;
+    color: ${props => props.theme.palette.txt.main};
     font-size: 1.5rem;
     margin-bottom: .5rem;
   }
@@ -175,7 +183,9 @@ Possui disponibilidade para realizar atendimento do chamado agora?`
           <p>Realizada tentativa de contato no numero {numero}.</p>
           <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
           <p>Atenciosamente, Helpdesk.</p>
+          <div className="btn-wrapper">
           <CopyButton text={tc}/>
+          </div>
       </ContentContact>
     },
     { 
@@ -202,7 +212,10 @@ Possui disponibilidade para realizar atendimento do chamado agora?`
           <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
           <br />
           <p>Atenciosamente, Helpdesk.</p>
-          <CopyButton text={tcs}/>
+          <div className="btn-wrapper">
+            <CopyButton text={tcs}/>
+          </div>
+
       </ContentContact>
    },
 
@@ -241,10 +254,14 @@ Possui disponibilidade para realizar atendimento do chamado agora?`
         <p>{greetings} {solicitante}! Sou o {analista} do Helpdesk.</p>
         <p>Motivo do contato referente ao chamado: {chamado}.</p>
         <p>Possui disponibilidade para realizar atendimento do chamado agora?</p>
+        <div className="btn-wrapper">
         <CopyButton text={ct}/>
+        </div>
         <br />
         <p>Log: Realizado contato via teams, aguardando resposta do solicitante</p>
+        <div className="btn-wrapper">
         <CopyButton text='Realizado contato via teams, aguardando resposta do solicitante'/>
+        </div>
       </ContentContact>
    },
    
