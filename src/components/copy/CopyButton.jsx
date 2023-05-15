@@ -22,7 +22,7 @@ const Button  = styled.button`
   box-shadow: inset 0 0 1.6rem -0.6rem ${props => props.theme.palette.copyButton.main};
   overflow: hidden;
   position: relative;
-  height: 3.5rem;
+  height: 3rem;
   
   .icon {
     background: white;
@@ -31,7 +31,7 @@ const Button  = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 3.5rem;
+    height: 2.5rem;
     width: 2rem;
     border-radius: 0.7rem;
     box-shadow: 0.1rem 0.1rem 0.6rem 0.2rem ${props => props.theme.palette.copyButton.main};
