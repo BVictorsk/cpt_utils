@@ -36,7 +36,7 @@ const Button  = styled.button`
     border-radius: 0.7rem;
     box-shadow: 0.1rem 0.1rem 0.6rem 0.2rem ${props => props.theme.palette.copyButton.main};
     right: 0.35rem;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
   }
 
   &:hover .icon {
@@ -86,7 +86,7 @@ function CopyButton(props) {
     if (copied) {
       const timer = setTimeout(() => {
         setCopied(false);
-      }, 500); // Define o tempo em milissegundos (3 segundos, neste caso)
+      }, 100); // Define o tempo em milissegundos (3 segundos, neste caso)
       return () => clearTimeout(timer);
     }
   }, [copied]);
@@ -102,7 +102,7 @@ function CopyButton(props) {
           <AiOutlineCopy />
         </div>
       </Button>
-      <ToastContainer autoClose={500}/>
+      <ToastContainer autoClose={100}/>
     </>
   );
 }

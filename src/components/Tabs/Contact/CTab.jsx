@@ -81,10 +81,16 @@ const ContentContact = styled.div`
     margin-bottom: .5rem;
   }
 
-  button {
-    margin-top: 2rem;
-    width: 33%;
+  .btn-wrapper {
+    width: 20%;
+    display: flex;
+
+    button {
+      width: 10rem;
+    }
   }
+
+
 `;
 
 const CTab = () => {

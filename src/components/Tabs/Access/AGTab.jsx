@@ -46,7 +46,7 @@ const TabContent = styled.div`
 
   select {
     margin-top: -1rem;
-    background-color: ${props => props.theme.palette.txt.white};
+    background-color: ${props => props.theme.palette.sidebar.main};
     color: ${props => props.theme.palette.txt.main};
     height: 2.5rem;
     width: 22rem
