@@ -251,10 +251,11 @@ Possui disponibilidade para realizar atendimento do chamado agora?`
         >
           <option value="">Selecione analista</option>
           <option value="Brian">Brian</option>
+          <option value="Daniel">Daniel</option>
+          <option value="Gabriel">Gabriel</option>
           <option value="Jefferson">Jefferson</option>
           <option value="Lucas">Lucas</option>
           <option value="Luis">Luis</option>
-          <option value="Paulo">Paulo</option>
           <option value="Renan">Renan</option>
         </select>
         <p>{greetings} {solicitante}! Sou o {analista} do Helpdesk.</p>
