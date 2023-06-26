@@ -102,13 +102,13 @@ const AGTab = () => {
   //tentativa de contato sem sucesso 
   const vpnl =  `${greetings}!
 
-Foi realizada alteração de acesso a VPN no no usuário solicitado.
+Foi realizada alteração de acesso a VPN no usuário solicitado.
 
 Acesso a VPN liberado com sucesso.`;
 
   const vpnr =  `${greetings}!
 
-Foi realizada alteração de acesso a VPN no no usuário solicitado.
+Foi realizada alteração de acesso a VPN no usuário solicitado.
 
 Acesso a VPN revogado com sucesso.`;
 
@@ -151,14 +151,14 @@ Em caso de erro ou duvida, favor entrar em contato com Helpdesk: ${contato}`;
       <AccessContent>
         <h3>Liberação de acesso a VPN</h3>
         <p>{greetings}!</p>
-        <p>Foi realizada alteração de acesso a VPN no no usuário solicitado.</p>
+        <p>Foi realizada alteração de acesso a VPN no usuário solicitado.</p>
         <p>Acesso a VPN liberado com sucesso.</p>
         <CopyButton text={vpnl}/>
       </AccessContent>
       <AccessContent>
         <h3>Revogação de acesso a VPN</h3>
         <p>{greetings}!</p>
-        <p>Foi realizada alteração de acesso a VPN no no usuário solicitado.</p>
+        <p>Foi realizada alteração de acesso a VPN no usuário solicitado.</p>
         <p>Acesso a VPN revogado com sucesso.</p>
         <CopyButton text={vpnr}/>
       </AccessContent>
