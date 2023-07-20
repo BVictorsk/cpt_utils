@@ -139,18 +139,18 @@ const CTab = () => {
   //tentativa de contato sem sucesso 
   const tc =  `${greetings} ${solicitante}!
   
-Realizada tentativa de contato no numero ${numero}.
+Foi realizada uma tentativa de contato sem sucesso no número: ${numero}
   
-Favor retornar contato com Helpdesk assim que possivel: ${contato}.
+Solicitamos que, por gentileza, entre em contato com o Helpdesk assim que possível pelos números: ${contato}.
   
 Atenciosamente, Helpdesk`;
 
 //sem contato 
 const tcs = `${greetings} ${solicitante}!
   
-Não identificamos numero de telefone para contato.
+Não foi possível identificar um número de telefone para contato.
   
-Favor retornar contato com Helpdesk assim que possivel: ${contato}.
+Solicitamos que, por gentileza, entre em contato com o Helpdesk assim que possível pelos números: ${contato}.
   
 Atenciosamente, Helpdesk`;
 
@@ -186,8 +186,8 @@ Possui disponibilidade para realizar atendimento do chamado agora?`
           <option value="(11) 2134-9024 / (11) 2147-6462">Oji</option>
         </select>
           <p>{greetings} {solicitante}!</p>
-          <p>Realizada tentativa de contato no numero {numero}.</p>
-          <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
+          <p>Foi realizada uma tentativa de contato sem sucesso no número: {numero}.</p>
+          <p>Solicitamos que, por gentileza, entre em contato com o Helpdesk assim que possível pelos números: {contato}.</p>
           <p>Atenciosamente, Helpdesk.</p>
           <div className="btn-wrapper">
           <CopyButton text={tc}/>
@@ -213,7 +213,7 @@ Possui disponibilidade para realizar atendimento do chamado agora?`
         </select>
           <p>{greetings} {solicitante}!</p>
           <br />
-          <p>Não identificamos numero de telefone para contato.</p>
+          <p>Não foi possível identificar um número de telefone para contato.</p>
           <br />
           <p>Favor retornar contato com Helpdesk assim que possivel: {contato}.</p>
           <br />
