@@ -133,7 +133,7 @@ const Nitro = () => {
     
 Usuário: ${user}
 E-mail: ${email}
-Senha: nitro@2023`;
+Senha: Nitro@2024`;
 
   const tabsData = [
     { 
